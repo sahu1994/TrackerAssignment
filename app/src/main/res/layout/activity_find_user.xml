@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_find_user"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/et_mobile_number"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="4dp"
+        android:background="@drawable/rect_white"
+        android:drawablePadding="16dp"
+        android:fontFamily="@font/roboto"
+        android:hint="Mobile Number(with country code)"
+        android:digits="+1234567890"
+        android:inputType="phone"
+        android:padding="10dp"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/et_mobile_number"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/rect_login_sign_up"
+            android:fontFamily="@font/roboto_bold"
+            android:onClick="submit"
+            android:text="Find Location"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/et_mobile_number"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/rect_login_sign_up"
+            android:fontFamily="@font/roboto_bold"
+            android:onClick="clear"
+            android:text="Clear"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsActivity" />
+
+</LinearLayout>

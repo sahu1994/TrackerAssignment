@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Location Tracker</string>
+    <string name="mobiler_number_email">Mobiler Number/Email</string>
+    <string name="title_location_permission">Location Permission</string>
+    <string name="ok">OK</string>
+    <string name="permission_message">Location Permission is mandatory to use this application</string>
+</resources>
